@@ -4,7 +4,7 @@ function ISTP(){
     return(
         <div>
             <div>
-                <p className={styles.p}>안녕하세요</p>
+                <p className={styles.p}>안녕하세요 </p>
             </div>
         </div>
     );
