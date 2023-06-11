@@ -13,7 +13,7 @@ export default function Home() {
       <div>
         <Head>
           <title>공주 테스트</title>
-        </Head>
+        </Head> 
             <div className={styles.bodystyle}>
               <section className={styles.container}>
                   <div className={styles.title}>

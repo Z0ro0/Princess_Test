@@ -302,7 +302,7 @@ function myFunction(){
         showResult(result);
     }
 
-    function showResult(result) {
+    function showResult(result) { 
         // 결과 화면 block 처리
         document.querySelector(".result").style.display = "block";
         // 문제 화면 숨김 처리 
