@@ -21,19 +21,30 @@
 
 .container .title {
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-items: center;
 }
 
-.container .title div:first-child{
-    color: #008156;
-    font-size: 38px;
+.heart1{
+    
+}
+.heart2{
+    
+}
+.container .title1{
+    color: #FFB5B5;
+    font-size: 50px;
 }
 
-.container .title div:nth-child(2){
-    font-size: 22px;
+.container .title2{
+    color: #333;
+    font-size: 25px;
+    grid-column: 2 / 3;
 }
 
 .container .main__img {
-    max-width: 1000px;
+    max-width: 300px;
     margin: auto;
 }
 
@@ -277,9 +288,9 @@
 }
     
 .btn input[type=button] {
-    background-color: #008156;
+    background-color: #fdfac4;
     font-family: 'Jua', sans-serif;
-    width: 60%;
+    width: 40%;
     height: 44px;
     border: none;
     border-radius: 10px;

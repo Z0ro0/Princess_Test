@@ -18,18 +18,22 @@ export default function MainPage() {
         </Head> 
             <div className={styles.bodystyle}>
               <section className={styles.container}>
+                <div className={styles.white}>
                   <div className={styles.title}>
-                      <div>미림 공주 테스트</div>
-                      <div>나는 어떤 공주님일까?</div>
+                    <img src='twinkleheart.png' className={styles.heart1}/>
+                      <div className={styles.title1}>미림 공주 테스트</div>
+                      <img src='twinkleheart.png' className={styles.heart2}/>
+                      <div className={styles.title2}>나는 어떤 공주님일까?</div>
                   </div>
                   <div className={styles.main__img}>
-                      <img src="" alt="princesses"/>
+                      <img src="princess.png" alt="princesses"/>
                   </div>
                   <div className={styles.btn}>
                       <input type="button" className={styles.btn__start} value="> 테스트 시작하기"/>
                   </div>
-                  <div className={styles.language}>
+                  {/* <div className={styles.language}>
                       <div className={styles.language__option}>한국어</div>
+                  </div> */}
                   </div>
               </section>
 
