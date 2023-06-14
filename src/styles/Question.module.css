@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 .question {
     display: flex;
     justify-content: center;
@@ -9,4 +18,80 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* 문제 페이지 */
+/* .container .bar {
+    margin-top: 2%;
+    border-radius: 8px;
+    height: 25px;
+    background-color: rgb(189, 189, 189);
+    box-shadow: 1px 1px 1px rgb(100, 100, 100);
+}
+
+.container .bar .bar__statement {
+    background-color: #008156;
+    transition: .4s;
+    border-radius: 8px;
+    height: 100%;
+    width: 0;
+} */
+
+.container .question {
+    margin-bottom: 10%;
+}
+
+.container .question>div:first-child {
+    margin-top: 10%;
+    font-size: 50px;
+    color: #FFE7E7;
+    height: 100px;
+    width: 80%;
+}
+
+.container .question>div:nth-child(2) {
+    font-size: 25px;
+    color: #333;
+}
+
+.container .question>div {
+    text-align: center;
+}
+
+.container .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 800px;
+    margin: auto;
+}
+
+.container .option {
+    width: 80%;
+    height: 20%;
+    background-color: #FFE7E7;
+    margin-bottom: 5%;
+    /* font-size: 23px; */
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 3px 4px 2px rgb(100, 100, 100);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.container .option:hover {
+    background-color: rgb(246, 253, 150);
+}
+
+.container:nth-child(2) {
+    display: none;
+}
+
+.inner:not(:first-child) {
+    display: none;
 }

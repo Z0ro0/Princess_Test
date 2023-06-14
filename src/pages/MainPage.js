@@ -35,7 +35,9 @@ export default function MainPage() {
                       <div className={styles.language__option}>한국어</div>
                   </div> */}
                   </div>
-              </div>  
+              </div>
+
+              
         </div>
     </div>
   ) 

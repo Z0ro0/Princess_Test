@@ -1,9 +1,11 @@
-import MainPage from '../pages/MainPage';
+// import MainPage from '../pages/MainPage';
+import Question from '../pages/Question';
 
 export default function Home() {
   return (
     <>
-      <MainPage />
+      {/* <MainPage /> */}
+      <Question />
     </>
   )
 }
