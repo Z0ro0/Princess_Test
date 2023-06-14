@@ -29,7 +29,7 @@ export default function MainPage() {
                       <img src="princess.png" alt="princesses"/>
                   </div>
                   <div className={styles.btn}>
-                      <input type="button" className={styles.btn__start} value="> 테스트 시작하기"/>
+                      <input type="button" className={styles.btn__start} value="시작해보겠노라~"/>
                   </div>
                   {/* <div className={styles.language}>
                       <div className={styles.language__option}>한국어</div>
