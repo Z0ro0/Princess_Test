@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 /* :root {
     --main-bg-color: brown;
     --main-theme-color: rgb(49, 194, 189);
@@ -10,7 +15,7 @@
 */
 
 .bodystyle { 
-    font-family: 'Jua', sans-serif;
+    font-family: 'PyeongChangPeace-Bold';
     margin: 0;
 }
 
@@ -58,7 +63,6 @@
     margin-top: 50px;
     width: 100%;
 }
-
 
 /* 문제 페이지 */
 .container .bar {
@@ -295,9 +299,9 @@
     
 .btn input[type=button] {
     background-color: #fdfac4;
-    font-family: 'Jua', sans-serif;
+    font-family: 'PyeongChangPeace-Bold';;
     width: 40%;
-    height: 44px;
+    height: 60px;
     border: none;
     border-radius: 10px;
     box-shadow: 3px 4px 2px rgb(100, 100, 100);
