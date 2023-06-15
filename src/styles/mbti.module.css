@@ -4,17 +4,17 @@
     font-weight: 700;
     font-style: normal;
 }
+
 .container { 
     font-family: 'PyeongChangPeace-Bold';
-    margin: 0;
-}
-/* 
-.result_btn_minus{
     display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 20% 5% 20% 15% 5% 15%;
 }
-.p{
-    color: aliceblue;
-} */
+.heartbox{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
 
 
 /*button*/
