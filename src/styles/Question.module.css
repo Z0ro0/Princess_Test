@@ -111,7 +111,7 @@
 }
 
 .container .option:hover {
-    background-color: rgb(246, 253, 150);
+    background-color: #ffc8c8;
 }
 
 .container:nth-child(2) {
