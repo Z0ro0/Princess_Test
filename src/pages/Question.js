@@ -23,6 +23,15 @@ export default function Question() {
                     <div className={styles.bar__statement}></div>
                 </div> */}
                 <div className={styles.senario}>
+                    <div className={styles.heartbox}>
+                        <img src='twinkleheart.png' className={styles.heart} />
+                        <img src='twinkleheart.png' className={styles.heart} />
+                        <img src='twinkleheart.png' className={styles.heart} />
+                        <img src='twinkleheart.png' className={styles.heart} />
+                        <img src='twinkleheart.png' className={styles.heart} />
+                        <img src='twinkleheart.png' className={styles.heart} />
+                        <img src='twinkleheart.png' className={styles.heart} />
+                    </div> 
                     <p className={styles.questionnum}>#1</p>
                     <p className={styles.questionask}>오늘은 새학기 첫날 두근두근</p>
                 </div>

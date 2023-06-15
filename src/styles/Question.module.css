@@ -10,6 +10,13 @@
     font-family: 'PyeongChangPeace-Bold';
     margin: 0;
 }
+.heartbox{
+    display: flex;
+    justify-content: center;
+}
+.heart{
+    
+}
 .senario{
     margin-top: 5%;
 }
@@ -55,7 +62,7 @@
 } */
 
 .container .question {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .container .question>div:first-child {
