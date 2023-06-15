@@ -22,6 +22,10 @@ export default function Question() {
                 {/* <div className={styles.bar}>
                     <div className={styles.bar__statement}></div>
                 </div> */}
+                <div className={styles.senario}>
+                    <p className={styles.questionnum}>#1</p>
+                    <p className={styles.questionask}>오늘은 새학기 첫날 두근두근</p>
+                </div>
                 <div className={styles.question__area}>
                     <div className={styles.inner}>
                         <div className={styles.question}>
