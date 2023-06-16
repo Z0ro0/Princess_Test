@@ -1,4 +1,3 @@
-// import styles from '../styles/Home.module.css';
 import styles from '../styles/Question.module.css';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -45,7 +44,7 @@ export default function Question() {
                 <div className={styles.inner}>
                     <div className={styles.options}>
                       {answers.map((answer, index) => (
-                        <button key={index} onClick={() => handleAnswerClick(index)}>
+                        <button key={index} onClick={() => handleAnswerClick(index)} className={styles.select}>
                           {answer.content1}<br />
                           <span>{answer.content2}</span>
                         </button>
