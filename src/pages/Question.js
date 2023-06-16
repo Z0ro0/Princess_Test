@@ -1,84 +1,59 @@
 // import styles from '../styles/Home.module.css';
 import styles from '../styles/Question.module.css';
 import Head from 'next/head';
-import { useEffect } from 'react';
-import myFunction from './data/mbti';
-//import Script from '../pages/data/mbti';
+import { useState } from 'react';
+import data from '../json/qnaList.json'
 
 export default function Question() {
-    const Question = () => {
-        useEffect(() => {
-            myFunction();
-        });
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  const handleAnswerClick = (index) => {
+    // 선택지를 클릭할 때마다 다음 문항으로 넘어감
+    if (currentQuestion < data.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
     }
+  };
 
-    return (
-        <div>
-            <Head>
-                <title>공주 테스트</title>
-            </Head>
+  const currentQna = data[currentQuestion];
+  const question = currentQna.question;
+  const answers = currentQna.answers;
+  const id = currentQna.id;
 
-            <div className={styles.container}>
-                {/* <div className={styles.bar}>
-                    <div className={styles.bar__statement}></div>
-                </div> */}
-                <div className={styles.senario}>
-                    <div className={styles.heartbox}>
-                        <img src='twinkleheart.png' className={styles.heart} />
-                        <img src='twinkleheart.png' className={styles.heart} />
-                        <img src='twinkleheart.png' className={styles.heart} />
-                        <img src='twinkleheart.png' className={styles.heart} />
-                        <img src='twinkleheart.png' className={styles.heart} />
-                        <img src='twinkleheart.png' className={styles.heart} />
-                        <img src='twinkleheart.png' className={styles.heart} />
-                    </div> 
-                    <p className={styles.questionnum}>#1</p>
-                    <p className={styles.questionask}>오늘은 새학기 첫날 두근두근</p>
-                </div>
-                <div className={styles.question__area}>
-                    <div className={styles.inner}>
-                        <div className={styles.question}>
-                            {/* <div></div> */}
-                        </div>
-                        <div className={styles.options}>
-                            <div className={styles.option}>
-                            </div>
-                            <div className={styles.option}>
-                            </div>
-                        </div>
+  return (
+    <div>
+        <Head>
+            <title>공주 테스트</title>
+        </Head>
+        <div className={styles.container}>
+            {/* <div className={styles.bar}>
+                <div className={styles.bar__statement}></div>
+            </div> */}
+            <div className={styles.senario}>
+                <div className={styles.heartbox}>
+                    <img src='twinkleheart.png' className={styles.heart} />
+                    <img src='twinkleheart.png' className={styles.heart} />
+                    <img src='twinkleheart.png' className={styles.heart} />
+                    <img src='twinkleheart.png' className={styles.heart} />
+                    <img src='twinkleheart.png' className={styles.heart} />
+                    <img src='twinkleheart.png' className={styles.heart} />
+                    <img src='twinkleheart.png' className={styles.heart} />
+                </div> 
+                <p className={styles.questionnum}>#{id}</p>
+                <p className={styles.questionask}>{question}</p>
+            </div>
+            <div className={styles.question__area}>
+                <div className={styles.inner}>
+                    <div className={styles.options}>
+                      {answers.map((answer, index) => (
+                        <button key={index} onClick={() => handleAnswerClick(index)}>
+                          {answer.content1}<br />
+                          <span>{answer.content2}</span>
+                        </button>
+                      ))}
                     </div>
                 </div>
             </div>
-
-            {/* <section className={styles.result}>
-                  <div >
-                      <img className={styles.princess_img}src="" alt="공주 이미지"/>
-                  </div>
-                  <div className={styles.result__box}>
-                      <div className={styles.char_name}></div>
-                      <div className={styles.seperator}></div>
-                      <div className={styles.result_description}>
-                      </div>
-                      <div className={styles.match}>
-                          <div className={styles.good_match}>
-                              <div className={styles.good_title}>좋은 궁합</div>
-                              <div className={styles.good_princess}> 
-                              </div>
-                          </div>
-                          
-                          <div className={styles.bad_match}>
-                              <div className={styles.bad_title}>나쁜 궁합</div>
-                              <div className={styles.bad_princess}>
-
-                              </div>
-                          </div>
-                      </div>
-                      <div className={styles.btn}>
-                          <input type="button" className={styles.btn__reset} value="테스트 다시 하기"/>
-                      </div>
-                  </div>
-              </section> */}
         </div>
-    )
+    </div>
+  )
 }
-
