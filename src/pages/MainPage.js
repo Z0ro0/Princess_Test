@@ -1,8 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import myFunction from './data/mbti';
-//import Script from '../pages/data/mbti';
+// import myFunction from './data/mbti';
 
 export default function MainPage() {
   const MainPage = () => {
@@ -31,9 +30,6 @@ export default function MainPage() {
                   <div className={styles.btn}>
                       <input type="button" className={styles.btn__start} value="시작해보겠노라~"/>
                   </div>
-                  {/* <div className={styles.language}>
-                      <div className={styles.language__option}>한국어</div>
-                  </div> */}
                   </div>
               </div>
 

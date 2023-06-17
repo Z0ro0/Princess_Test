@@ -2,8 +2,7 @@
 import styles from '../styles/mbti.module.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import myFunction from './data/mbti';
-//import Script from '../pages/data/mbti';
+// import myFunction from './data/mbti';
 
 export default function Question() {
     const Question = () => {
