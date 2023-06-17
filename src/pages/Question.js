@@ -39,7 +39,7 @@ export default function Question() {
                 </div> 
                 <p className={styles.questionnum}>#{id}</p>
                 <p className={styles.questionask}>{question}</p>
-            </div>
+            </div> 
             <div className={styles.question__area}>
                 <div className={styles.inner}>
                     <div className={styles.options}>
