@@ -1,6 +1,8 @@
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
+import MainImg from '../../public/img/group_princess.png';
 import { useEffect } from 'react';
 import myFunction from './data/mbti';
 //import Script from '../pages/data/mbti';
@@ -27,7 +29,7 @@ export default function MainPage() {
                       <div className={styles.title2}>나는 어떤 공주님일까?</div>
                   </div>
                   <div className={styles.main__img}>
-                      <img src="princess.png" alt="princesses"/>
+                    <Image className={styles.MainImg} src={MainImg} alt="MainImg"/>
                   </div>
                   <Link href="/Question">
                     <div className={styles.btn}>

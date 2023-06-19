@@ -22,7 +22,6 @@
 .container {
     padding: 5% 10%;
     position: relative;
-    margin-top: 8%;
 }
 
 .container .title {
@@ -46,6 +45,7 @@
     font-size: 400%;
     grid-row: 1 / 2;
     grid-column: 3 / 4;
+    margin: 0 auto;
 }
 
 .container .title2{
@@ -54,17 +54,14 @@
     grid-column: 3 / 4;
 }
 
-.container .main__img {
-    max-width: 300px;
-    margin: auto;
+.MainImg {
+    width: 88vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6% 0 6% -6%;
 }
-
-.container .main__img img {
-    margin-top: 50px;
-    width: 100%;
-}
-
-
 
 /* RESULT PAGE */
 /* 반응형에서만 width 값 변경 */
