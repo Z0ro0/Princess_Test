@@ -55,6 +55,10 @@
     display: flex;
     justify-content: center;
 }
+.heart {
+    width: 7.5vw;
+    height: auto;
+}
 
 .p_title {
     font-size: 3.5rem;

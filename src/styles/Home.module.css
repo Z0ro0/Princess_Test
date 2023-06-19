@@ -40,6 +40,11 @@
     grid-column: 4 / 5;
     
 }
+.heart1, .heart2 {
+    width: 7.5vw;
+    height: auto;
+}
+
 .container .title1{
     color: #FFB5B5;
     font-size: 400%;

@@ -15,7 +15,8 @@
     justify-content: center;
 }
 .heart{
-    
+    width: 7.5vw;
+    height: auto;
 }
 .senario{
     margin-top: 5%;
