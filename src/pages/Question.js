@@ -28,37 +28,32 @@ export default function Question() {
       setCurrentQuestion(currentQuestion + 1);
       setProgress((prevProgress) => prevProgress + 1);
     } else {
+      console.log('MBTI 결과:');
+      console.log('E/I:', result.eCount > result.iCount ? 'E' : 'I');
+      console.log('S/N:', result.sCount > result.nCount ? 'S' : 'N');
+      console.log('T/F:', result.tCount > result.fCount ? 'T' : 'F');
+      console.log('P/J:', result.pCount > result.jCount ? 'P' : 'J');
       // 마지막 질문에서는 결과 창 페이지로 이동
       router.push('/Mbti');
     }
 
+    const answer = currentQna.answers[index];
+
     // 선택한 답변에서 "e"와 "i"를 분류하여 카운트
-    const countE = answer.type.includes("e") ? 1 : 0;
-    const countI = answer.type.includes("i") ? 1 : 0;
+    const countE = answer.type.includes("e") ? result.eCount + 1 : result.eCount;
+    const countI = answer.type.includes("i") ? result.iCount + 1 : result.iCount;
 
     // 선택한 답변에서 "s"와 "n"를 분류하여 카운트
-    const countS = answer.type.includes("s") ? 1 : 0;
-    const countN = answer.type.includes("n") ? 1 : 0;
+    const countS = answer.type.includes("s") ? result.sCount + 1 : result.sCount;
+    const countN = answer.type.includes("n") ? result.nCount + 1 : result.nCount;
 
     // 선택한 답변에서 "t"와 "f"를 분류하여 카운트
-    const countT = answer.type.includes("t") ? 1 : 0;
-    const countF = answer.type.includes("f") ? 1 : 0;
+    const countT = answer.type.includes("t") ? result.tCount + 1 : result.tCount;
+    const countF = answer.type.includes("f") ? result.fCount + 1 : result.fCount;
 
     // 선택한 답변에서 "p"와 "j"를 분류하여 카운트
-    const countP = answer.type.includes("p") ? 1 : 0;
-    const countJ = answer.type.includes("j") ? 1 : 0;
-
-    // 카운트 결과를 result 배열에 추가
-    setResult((prevResult) => ({
-      eCount: prevResult.eCount + countE,
-      iCount: prevResult.iCount + countI,
-      sCount: prevResult.sCount + countS,
-      nCount: prevResult.nCount + countN,
-      tCount: prevResult.tCount + countT,
-      fCount: prevResult.fCount + countF,
-      pCount: prevResult.pCount + countP,
-      jCount: prevResult.jCount + countJ,
-    }));
+    const countP = answer.type.includes("p") ? result.pCount + 1 : result.pCount;
+    const countJ = answer.type.includes("j") ? result.jCount + 1 : result.jCount;
   };
 
   useEffect(() => {
