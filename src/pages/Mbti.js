@@ -1,7 +1,10 @@
 import styles from '../styles/mbti.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from 'react';
+import twinkleheart from '../../public/img/twinkleheart.png';
+import princess from '../../public/img/princess.png';
 // import myFunction from './data/mbti';
 
 export default function Question() {
@@ -23,18 +26,17 @@ export default function Question() {
                     <div >
                         <div className={styles.result_btn_minus}>
                             <div className={styles.heartbox}>
-                                <img src='twinkleheart.png' className={styles.heart} />
-                                <img src='twinkleheart.png' className={styles.heart} />
-                                <img src='twinkleheart.png' className={styles.heart} />
-                                <img src='twinkleheart.png' className={styles.heart} />
-                                <img src='twinkleheart.png' className={styles.heart} />
-                                <img src='twinkleheart.png' className={styles.heart} />
-                                <img src='twinkleheart.png' className={styles.heart} />
+                                <Image className={styles.heart} src={twinkleheart} alt="heart"/>
+                                <Image className={styles.heart} src={twinkleheart} alt="heart"/>
+                                <Image className={styles.heart} src={twinkleheart} alt="heart"/>
+                                <Image className={styles.heart} src={twinkleheart} alt="heart"/>
+                                <Image className={styles.heart} src={twinkleheart} alt="heart"/>
+                                <Image className={styles.heart} src={twinkleheart} alt="heart"/>
                             </div>
 
                             <div className={styles.p_title}>따뜻 미지근 공주님</div>
 
-                            <img src='princess.png' className={styles.p_img}/>
+                            <Image src={princess} className={styles.p_img}/>
 
                             <div className={styles.p_title2}>공주님은 따뜻하고 온화한 따뜻 미지근 공주님입니다.</div>
 
@@ -62,11 +64,11 @@ export default function Question() {
                             <div className={styles.match}>
                                 <div className={styles.good_match}>
                                     <div className={styles.p_good_title}>포근 공주님</div>
-                                    <img src='princess.png' className={styles.p_good_img}/>
+                                    <Image src={princess} className={styles.p_good_img}/>
                                 </div>
                                 <div className={styles.bad_match}>
                                     <div className={styles.p_bad_title}>까칠 뾰족 공주님</div>
-                                    <img src='princess.png' className={styles.p_bad_img}/>
+                                    <Image src={princess} className={styles.p_bad_img}/>
                                 </div>
                             </div>
                         </div>{/* 버튼 빼고 모든 요소 */}
