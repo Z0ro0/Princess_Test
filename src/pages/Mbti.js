@@ -1,6 +1,6 @@
-// import styles from '../styles/Home.module.css';
 import styles from '../styles/mbti.module.css';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useEffect } from 'react';
 // import myFunction from './data/mbti';
 
@@ -71,9 +71,11 @@ export default function Question() {
                             </div>
                         </div>{/* 버튼 빼고 모든 요소 */}
                     </div>
-                    <div className={styles.btn}>
-                        <input type="button" className={styles.btn__reset} value="테스트 다시 하기" />
-                    </div>
+                    <Link href="/MainPage">
+                        <div className={styles.btn}>
+                            <input type="button" className={styles.btn__reset} value="테스트 다시 하기" />
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
