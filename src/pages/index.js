@@ -5,8 +5,7 @@ import Mbti from '../pages/Mbti';
 export default function Home() {
   return (
     <>
-      {/* <MainPage /> */}
-      <Question />
+      <MainPage />
       {/* <Mbti /> */}
     </>
   )

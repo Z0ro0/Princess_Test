@@ -5,11 +5,13 @@ import data from '../json/qnaList.json'
 
 export default function Question() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   const handleAnswerClick = (index) => {
     // 선택지를 클릭할 때마다 다음 문항으로 넘어감
     if (currentQuestion < data.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
+      setProgress((prevProgress) => prevProgress + 1);
     }
   };
 
@@ -24,9 +26,10 @@ export default function Question() {
             <title>공주 테스트</title>
         </Head>
         <div className={styles.container}>
-            {/* <div className={styles.bar}>
-                <div className={styles.bar__statement}></div>
-            </div> */}
+        <div className={styles.progressBar}>
+          <div className={`${styles.progress} ${styles.progressWithRadius}`} style={{ width: `${(progress / 12) * 100}%` }}></div>
+        </div>
+
             <div className={styles.senario}>
                 <div className={styles.heartbox}>
                     <img src='twinkleheart.png' className={styles.heart} />
@@ -39,7 +42,7 @@ export default function Question() {
                 </div> 
                 <p className={styles.questionnum}>#{id}</p>
                 <p className={styles.questionask}>{question}</p>
-            </div> 
+            </div>
             <div className={styles.question__area}>
                 <div className={styles.inner}>
                     <div className={styles.options}>

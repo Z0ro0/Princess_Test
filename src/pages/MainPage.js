@@ -1,7 +1,9 @@
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useEffect } from 'react';
-// import myFunction from './data/mbti';
+import myFunction from './data/mbti';
+//import Script from '../pages/data/mbti';
 
 export default function MainPage() {
   const MainPage = () => {
@@ -27,13 +29,16 @@ export default function MainPage() {
                   <div className={styles.main__img}>
                       <img src="princess.png" alt="princesses"/>
                   </div>
-                  <div className={styles.btn}>
-                      <input type="button" className={styles.btn__start} value="시작해보겠노라~"/>
-                  </div>
-                  </div>
-              </div>
-
-              
+                  <Link href="/Question">
+                    <div className={styles.btn}>
+                        <input type="button" className={styles.btn__start} value="시작해보겠노라~"/>
+                    </div>
+                  </Link>
+                  {/* <div className={styles.language}>
+                      <div className={styles.language__option}>한국어</div>
+                  </div> */}
+                </div>
+              </div>  
         </div>
     </div>
   ) 
