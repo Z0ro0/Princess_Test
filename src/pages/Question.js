@@ -34,7 +34,7 @@ export default function Question() {
       router.push({
         pathname: '/Mbti',
         query: { mbtiResult: mbtiResult },
-      });         
+      });
     }
 
     const answer = data[currentQuestion].answers[index];
@@ -60,28 +60,14 @@ export default function Question() {
 
   const calculateMBTI = () => {
     let mbtiResult = '';
-  
+
     mbtiResult += result.E > result.I ? 'E' : 'I';
     mbtiResult += result.S > result.N ? 'S' : 'N';
     mbtiResult += result.T > result.F ? 'T' : 'F';
-    if (result.P === result.J) {
-      // P와 J의 count가 같은 경우, P와 J를 이상/이하로 구분합니다.
-      mbtiResult += result.P > data.length / 3 ? 'P' : 'J';
-    } else {
-      // P와 J의 count가 다른 경우, count가 더 큰 것을 선택합니다.
-      mbtiResult += result.P > result.J ? 'P' : 'J';
-    }
-  
+    mbtiResult += result.P >= result.J ? 'P' : 'J';
+
     return mbtiResult;
   };
-
-  useEffect(() => {
-    if (currentQuestion === data.length) {
-      console.log('MBTI 결과:');
-      const mbtiResult = calculateMBTI();
-      console.log(mbtiResult);
-    }
-  }, [currentQuestion]);
 
   const currentQna = data[currentQuestion];
   const { question, answers, id } = currentQna;
