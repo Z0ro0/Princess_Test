@@ -11,18 +11,22 @@ import princess from '../../public/img/princess.png';
 
 export default function Question() {
     const router = useRouter();
-    const mbtiResult = router.query.mbtiResult || '';
+    const { mbtiResult } = router.query;
     const mbtiInfo = data.find((item) => item.mbti === mbtiResult);
 
-    const title = mbtiResult?.title || '';
-    const title2 = mbtiResult?.title2 || '';
-    const description1 = mbtiResult?.description1 || '';
-    const description2 = mbtiResult?.description2 || '';
-    const department = mbtiResult?.department || '';
-    const good = mbtiResult?.good || '';
-    const bad = mbtiResult?.bad || '';
+    const title = mbtiInfo?.title || '';
+    const title2 = mbtiInfo?.title2 || '';
+    const description1 = mbtiInfo?.description1 || '';
+    const description2 = mbtiInfo?.description2 || '';
+    const department = mbtiInfo?.department || '';
+    const good = mbtiInfo?.good || '';
+    const bad = mbtiInfo?.bad || '';    
 
-    console.log(mbtiResult);
+    useEffect(() => {
+        if (mbtiResult) {
+          console.log('MBTI 결과:', mbtiResult);
+        }
+      }, [mbtiResult]);
 
     return (
         <div className={styles.box}>

@@ -29,13 +29,12 @@ export default function Question() {
       console.log('MBTI 결과:');
       const mbtiResult = calculateMBTI();
       console.log(mbtiResult);
-      router.push('/Mbti');
 
       // MBTI 결과를 다른 페이지로 전달
       router.push({
         pathname: '/Mbti',
         query: { mbtiResult: mbtiResult },
-      });
+      });         
     }
 
     const answer = data[currentQuestion].answers[index];
@@ -48,17 +47,15 @@ export default function Question() {
       }));
     });
 
-    useEffect(() => {
-      if (currentQuestion === data.length) {
-        console.log('MBTI 결과:');
-        const mbtiResult = calculateMBTI();
-        console.log(mbtiResult);
-        router.push({
-          pathname: '/Mbti',
-          query: { mbtiResult: mbtiResult },
-        });
-      }
-    }, [currentQuestion]);
+    if (currentQuestion === data.length - 1) {
+      console.log('MBTI 결과:');
+      const mbtiResult = calculateMBTI();
+      console.log(mbtiResult);
+      router.push({
+        pathname: '/Mbti',
+        query: { mbtiResult: mbtiResult },
+      });
+    }
   };
 
   const calculateMBTI = () => {
