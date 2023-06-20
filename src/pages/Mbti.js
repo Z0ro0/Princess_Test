@@ -103,7 +103,118 @@ export default function Question() {
         }
     };
 
+    const getGoodMatchImageByType = (good) => {
+        switch (good) {
+            case '온화하고 적극적인 똑똑 공주님':
+                return ENFJ;
+                break;
+            case '활기 넘치는 활기 발랄 공주님':
+                return ENFP;
+                break;
+            case '모두 날 따라와 대장 공주님':
+                return ENTJ;
+                break;
+            case '마이웨이 남의 시선 따윈 상관 없는 당당 공주님':
+                return ENTP;
+                break;
+            case '모두 사이좋게 지내 배려 공주님':
+                return ESFJ;
+                break;
+            case '사교적인 슈퍼스타 공주님':
+                return ESFP;
+                break;
+            case '리더쉽 있는 사교 공주님':
+                return ESTJ;
+                break;
+            case '자유 분방 열정 만땅 불꽃 공주님':
+                return ESTP;
+                break;
+            case '완벽주의 미지근 공주님':
+                return INFJ;
+                break;
+            case '따뜻한 마음씨 둥글 공주님':
+                return INFP;
+                break;
+            case '지식왕 딱딱 공주님':
+                return INTJ;
+                break;
+            case '숨겨진 인싸 공주님':
+                return INTP;
+                break;
+            case '순두부처럼 보이지만 사실 단단한 공주님':
+              return ISFJ;
+              break;
+            case '겉바속촉 얌전 공주님':
+              return ISFP;
+              break;
+            case '엄격한 무뚝뚝 공주님':
+              return ISTJ;
+              break;
+            case '호기심 대마왕 카리스마 공주님':
+              return ISTP;
+              break;
+            default:
+              return null; // 기본 이미지 또는 오류 처리
+        }
+    };
+    const getBadMatchImageByType = (bad) => {
+        switch (bad) {
+            case '온화하고 적극적인 똑똑 공주님':
+                return ENFJ;
+                break;
+            case '활기 넘치는 활기 발랄 공주님':
+                return ENFP;
+                break;
+            case '모두 날 따라와 대장 공주님':
+                return ENTJ;
+                break;
+            case '마이웨이 남의 시선 따윈 상관 없는 당당 공주님':
+                return ENTP;
+                break;
+            case '모두 사이좋게 지내 배려 공주님':
+                return ESFJ;
+                break;
+            case '사교적인 슈퍼스타 공주님':
+                return ESFP;
+                break;
+            case '리더쉽 있는 사교 공주님':
+                return ESTJ;
+                break;
+            case '자유 분방 열정 만땅 불꽃 공주님':
+                return ESTP;
+                break;
+            case '완벽주의 미지근 공주님':
+                return INFJ;
+                break;
+            case '따뜻한 마음씨 둥글 공주님':
+                return INFP;
+                break;
+            case '지식왕 딱딱 공주님':
+                return INTJ;
+                break;
+            case '숨겨진 인싸 공주님':
+                return INTP;
+                break;
+            case '순두부처럼 보이지만 사실 단단한 공주님':
+              return ISFJ;
+              break;
+            case '겉바속촉 얌전 공주님':
+              return ISFP;
+              break;
+            case '엄격한 무뚝뚝 공주님':
+              return ISTJ;
+              break;
+            case '호기심 대마왕 카리스마 공주님':
+              return ISTP;
+              break;
+            default:
+              return null; // 기본 이미지 또는 오류 처리
+        }
+    };
+
     const mbtiImage = getImageByType(mbtiResult);
+    const goodMatchImage = getGoodMatchImageByType(good);
+    const badMatchImage = getBadMatchImageByType(bad);
 
     return (
         <div className={styles.box}>
@@ -151,11 +262,11 @@ export default function Question() {
                             <div className={styles.match}>
                                 <div className={styles.good_match}>
                                     <div className={styles.p_good_title}>{good}</div>
-                                    <Image src={princessImg} alt="good_match_princess" className={styles.p_good_img} />
+                                    {goodMatchImage && <Image src={goodMatchImage} className={styles.p_good_img} alt="Good Match"/>}
                                 </div>
                                 <div className={styles.bad_match}>
                                     <div className={styles.p_bad_title}>{bad}</div>
-                                    <Image src={princessImg} alt="bad_match_princess" className={styles.p_bad_img} />
+                                    {badMatchImage && <Image src={badMatchImage} className={styles.p_bad_img} alt="bad Match"/>}
                                 </div>
                             </div>
                         </div>{/* 버튼 빼고 모든 요소 */}

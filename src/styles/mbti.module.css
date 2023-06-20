@@ -110,3 +110,9 @@
     align-items: center;
     margin: 0 auto;
 }
+
+.p_good_img,
+.p_bad_img {
+    width: 25vw;
+    height: auto;
+}
