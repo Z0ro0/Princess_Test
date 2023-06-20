@@ -25,7 +25,7 @@ export default function MainPage() {
                 <div className={styles.white}>
                   <div className={styles.title}>
                     <Image className={styles.heart1} src={twinkleheart} alt="twinkleheart"/>
-                    <div className={styles.title1}>미림 공주 테스트</div>
+                    <div className={styles.title1}><p className={styles.title1_text}>미림 공주 테스트</p></div>
                     <Image className={styles.heart2} src={twinkleheart} alt="twinkleheart"/>
                     <div className={styles.title2}>나는 어떤 공주님일까?</div>
                   </div>

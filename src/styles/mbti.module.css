@@ -65,6 +65,7 @@
     white-space: nowrap;
     text-align: center;
     margin: 10px;
+    text-shadow:  -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
 }
 
 .p_img {
@@ -96,8 +97,16 @@
     margin-bottom: 50px;
 }
 
+.p_title{
+    color:  #FFB5B5;
+}
+
 .department {
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.5rem;
+}
+.department_name_link{
+    font-size: 80%;
+    color: #FFB5B5;
 }
