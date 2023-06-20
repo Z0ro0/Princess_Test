@@ -255,6 +255,7 @@ export default function Question() {
                                 <div className={styles.part2_line}>{description2_4}</div>
                         
                             <div className={styles.department}>
+                                <p className={styles.recommend_department}>이런 당신에게 추천하는 학과는...</p>
                                 <div className={styles.department_name}>{department}</div>
                                 <a className={styles.department_name} href="https://www.e-mirim.hs.kr/admission/typicalCourse.do" target='_blank'>입학 전형 보러 가기</a>
                             </div>

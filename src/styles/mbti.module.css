@@ -49,7 +49,6 @@
 .btn input[type=button] {
     background-color: #fdfac4;
     font-family: 'PyeongChangPeace-Bold';
-    ;
     width: 40%;
     height: 60px;
     border: none;
@@ -94,6 +93,11 @@
     margin: 20px;
 }
 
+.good_title,
+.bad_title {
+    font-family: 'PyeongChangPeace-Bold';
+}
+
 .p_good_title, 
 .p_bad_title {
     text-align: center;
@@ -107,6 +111,9 @@
     margin-bottom: 50px;
 }
 
+.recommend_department {
+    font-family: 'PyeongChangPeace-Light';
+}
 .department {
     font-family: 'PyeongChangPeace-Bold';
     text-align: center;
