@@ -101,3 +101,12 @@
     font-size: 1.5rem;
     margin: 8% 0 8% 0;
 }
+
+.princessImg {
+    width: 30vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
