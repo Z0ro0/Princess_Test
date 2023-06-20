@@ -19,14 +19,13 @@ export default function Question() {
     const description1_1 = mbtiInfo?.description1_1 || '';
     const description1_2 = mbtiInfo?.description1_2 || '';
     const description1_3 = mbtiInfo?.description1_3 || '';
-    const description1_4 = mbtiInfo?.description1_4 || '';
     const description2_1 = mbtiInfo?.description2_1 || '';
     const description2_2 = mbtiInfo?.description2_2 || '';
     const description2_3 = mbtiInfo?.description2_3 || '';
     const description2_4 = mbtiInfo?.description2_4 || '';
     const department = mbtiInfo?.department || '';
     const good = mbtiInfo?.good || '';
-    const bad = mbtiInfo?.bad || '';
+    const bad = mbtiInfo?.bad || '';    
 
     useEffect(() => {
         if (mbtiResult) {
@@ -61,17 +60,16 @@ export default function Question() {
                             <div className={styles.p_title2}>{title2}</div>
 
                             <div className={styles.part1}>
-                                <div className={styles.part1_line1}>{description1_1}</div>
-                                <div className={styles.part1_line2}>{description1_2}</div>
-                                <div className={styles.part1_line3}>{description1_3}</div>
-                                <div className={styles.part1_line4}>{description1_4}</div>
+                                <div className={styles.part1_line}>{description1_1}</div>
+                                <div className={styles.part1_line}>{description1_2}</div>
+                                <div className={styles.part1_line}>{description1_3}</div>
                             </div>
                         
                             <div className={styles.part2}>
-                                <div className={styles.part2_line1}>{description2_1}</div>
-                                <div className={styles.part2_line2}>{description2_2}</div>
-                                <div className={styles.part2_line3}>{description2_3}</div>
-                                <div className={styles.part2_line4}>{description2_4}</div>
+                                <div className={styles.part2_line}>{description2_1}</div>
+                                <div className={styles.part2_line}>{description2_2}</div>
+                                <div className={styles.part2_line}>{description2_3}</div>
+                                <div className={styles.part2_line}>{description2_4}</div>
                         
                             <div className={styles.department}>
                                 <div className={styles.department_name}>{department}</div>
