@@ -261,10 +261,12 @@ export default function Question() {
 
                             <div className={styles.match}>
                                 <div className={styles.good_match}>
+                                    <p className={styles.good_title}>우린 친구~ 사이 좋은 이웃나라 공주님</p>
                                     <div className={styles.p_good_title}>{good}</div>
                                     {goodMatchImage && <Image src={goodMatchImage} className={styles.p_good_img} alt="Good Match"/>}
                                 </div>
                                 <div className={styles.bad_match}>
+                                    <p className={styles.bad_title}>저리 가! 만나기만 하면 싸우는 공주님</p>
                                     <div className={styles.p_bad_title}>{bad}</div>
                                     {badMatchImage && <Image src={badMatchImage} className={styles.p_bad_img} alt="bad Match"/>}
                                 </div>
