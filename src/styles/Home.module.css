@@ -68,19 +68,6 @@
     margin: 6% 0 6% -6%;
 }
 
-/* RESULT PAGE */
-/* 반응형에서만 width 값 변경 */
-.result {
-    display: none;
-    margin-bottom: 100px;
-    background: linear-gradient(180deg, rgb(40, 130, 221), white);
-    height: 100%;
-    width: 60%;
-    min-height: 100vh;
-    padding-bottom: 70px;
-    margin: auto;
-}
-
 @media screen and (max-width: 768px) {
     .result {
         width: 100%;
@@ -242,4 +229,26 @@
     cursor: pointer;
     margin-top: 15px;
     color: #333;
+}
+
+@media screen and (min-width: 5120px) and (min-height: 2880px) {
+    .container .title1 {
+        font-size: 10rem;
+    }
+    .container .title2 {
+        font-size: 8rem;
+    }
+    .btn input[type=button] {
+        background-color: #fdfac4;
+        font-family: 'PyeongChangPeace-Bold';;
+        width: 26vw;
+        height: 6vh;
+        border: none;
+        border-radius: 42px;
+        box-shadow: 9px 12px 4px rgb(100, 100, 100);
+        font-size: 5rem;
+        cursor: pointer;
+        margin-top: 15px;
+        color: #333;
+    }
 }

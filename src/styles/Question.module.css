@@ -144,3 +144,20 @@
 .inner:not(:first-child) {
     display: none;
 }
+
+@media screen and (min-width: 5120px) and (min-height: 2880px) {
+    .questionnum {
+        font-size: 8rem;
+    }
+    .questionask {
+        font-size: 8rem;
+    }
+    .select {
+        width: 40vw;
+        height: auto;
+        margin-bottom: 1%;
+        font-size: 3.6rem;
+        border-radius: 30px;
+        box-shadow: 9px 12px 6px rgb(100, 100, 100);
+    }
+}
